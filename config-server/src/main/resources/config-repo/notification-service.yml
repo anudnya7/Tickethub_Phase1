@@ -1,0 +1,12 @@
+# Notification Service configuration.
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/notification_db
+    username: tickethub
+    # password: NOT stored here (secret). Provide env var DB_PASSWORD.
+  kafka:
+    bootstrap-servers: localhost:9092
+
+notification:
+  topic: booking-confirmed
+  sender: logging              # logging | smtp (smtp -> Mailpit on localhost:1025)
